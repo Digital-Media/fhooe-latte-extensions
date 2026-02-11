@@ -1,0 +1,31 @@
+{
+    "name": "fhooe/latte-extensions",
+    "description": "A collection of Latte extensions for other fhooe packages",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "Latte",
+        "extensions",
+        "education",
+        "routing",
+        "sessions"
+    ],
+    "authors": [
+        {
+            "name": "Wolfgang Hochleitner",
+            "email": "wolfgang.hochleitner@fh-hagenberg.at",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "fhooe/router": "^2.0",
+        "latte/latte": "^3.1"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Fhooe\\Latte\\": "src/"
+        }
+    }
+}
