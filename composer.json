@@ -18,8 +18,8 @@
         }
     ],
     "require": {
-        "php": "^8.4",
-        "fhooe/router": "^2.0",
+        "php": "^8.5",
+        "fhooe/router": "^3.0",
         "latte/latte": "^3.1"
     },
     "minimum-stability": "stable",

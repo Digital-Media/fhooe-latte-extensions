@@ -19,7 +19,7 @@ final class SessionExtension extends Extension
     public function getFunctions(): array
     {
         return [
-            'session' => $this->getSessionEntry(...),
+            "session" => $this->getSessionEntry(...),
         ];
     }
 
@@ -30,6 +30,6 @@ final class SessionExtension extends Extension
      */
     public function getSessionEntry(string $key): mixed
     {
-        return $_SESSION[$key] ?? '';
+        return $_SESSION[$key] ?? "";
     }
 }
