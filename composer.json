@@ -1,6 +1,7 @@
 {
     "name": "fhooe/latte-extensions",
     "description": "A collection of Latte extensions for other fhooe packages",
+    "version": "1.0.0",
     "license": "MIT",
     "type": "library",
     "keywords": [
@@ -17,6 +18,15 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../fhooe-router",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
         "php": "^8.5",
         "fhooe/router": "^3.0",
@@ -27,5 +37,15 @@
         "psr-4": {
             "Fhooe\\Latte\\": "src/"
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.94"
+    },
+    "scripts": {
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "test": [
+            "@cs-check"
+        ]
     }
 }

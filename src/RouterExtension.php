@@ -12,9 +12,7 @@ use Latte\Extension;
  */
 final class RouterExtension extends Extension
 {
-    public function __construct(private readonly Router $router)
-    {
-    }
+    public function __construct(private readonly Router $router) {}
 
     /**
      * Provides url_for(pattern) and get_base_path() for Latte templates (router uses public readonly basePath).
@@ -24,7 +22,7 @@ final class RouterExtension extends Extension
     {
         return [
             "url_for" => $this->router->urlFor(...),
-            "get_base_path" => fn (): string => $this->router->basePath,
+            "get_base_path" => fn(): string => $this->router->basePath,
         ];
     }
 }
